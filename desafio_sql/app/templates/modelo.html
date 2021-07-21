@@ -1,0 +1,10 @@
+<h1>{% block title %} Armazenamento dos Modelos de IA {% endblock %}</h1>
+{% if modelos %}    
+    {% for modelo in modelos %}
+        <h2>{{ modelo.nome }}</h2>
+        <p>
+        <span>Descrição: {{ modelo.descricao }}</span><br />
+        </p>
+    {% endfor %}
+{% endif %}
+

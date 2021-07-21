@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Informações do Modelo {% endblock %}</h1>
+   
+    
+        <h2 style="color:#FF0000">Nome: {{ modelos.nome }}</h2>
+        <p>
+        <span style="font-size: 20px;">Descrição: {{ modelos.descricao }}</span><br />
+        <span style="font-size: 20px;">Projeto: {{ modelos.projeto_nome }}</span><br />
+        <span style="font-size: 20px;">Area de aplicação: {{ modelos.area_aplicacao }}</span><br />
+        </p>
+
+        <a class="btn btn-primary" href="{{url_for('index')}}">Voltar</a>
+{% endblock %}
+
+

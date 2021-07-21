@@ -1,0 +1,16 @@
+h1 {
+    border: 2px #eee solid;
+    color: brown;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+  }
+  
+  .footer {
+    background-color: #705b5b;
+  }

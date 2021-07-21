@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Armazenamento dos Modelos de IA {% endblock %}</h1>
+    {% for modelo in modelos %}
+        <a href="{{ url_for('info_modelo', nome=modelo.nome) }}">    
+            <h2>{{ modelo.nome }}</h2>
+        </a>
+        
+        <hr>
+    {% endfor %}
+{% endblock %}

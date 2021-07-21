@@ -1,0 +1,12 @@
+<h1>{% block title %} Informações do Modelo {% endblock %}</h1>
+{% if modelos %}    
+    
+        <h2>{{ modelos.nome }}</h2>
+        <p>
+        <span>Descrição: {{ modelos.descricao }}</span><br />
+        <span>Projeto: {{ modelos.projeto_nome }}</span><br />
+        <span>Area de aplicação: {{ modelos.area_aplicacao }}</span><br />
+        </p>
+    
+{% endif %}
+

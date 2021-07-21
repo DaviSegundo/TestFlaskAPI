@@ -1,0 +1,9 @@
+<h1>{% block title %} Informações do Projeto {% endblock %}</h1>
+{% if projetos %}    
+    
+        <h2>{{ projetos.nome }}</h2>
+        <p>
+        <span>Membros: {{ projetos.membros }}</span><br />
+        </p>
+    
+{% endif %}

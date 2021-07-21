@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Informações do Projeto {% endblock %}</h1>
+{% if projetos %}    
+    
+        <h2 style="color:#FF0000">Nome: {{ projetos.nome }}</h2>
+        <p>
+        <span style="font-size: 20px;">Membros: {{ projetos.membros }}</span><br />
+        </p>
+
+        <hr>
+        <p style="font-size: 20px;">Modelos:</p>
+        {% for modelo in modelos%}
+                <span style="font-size: 18px;">{{ modelo.nome }}</span><br />
+        {% endfor %}
+        
+        <hr>
+        <a class="btn btn-primary" href="{{url_for('index2')}}">Voltar</a>
+{% endif %}
+{% endblock %}

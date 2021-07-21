@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Armazenamento dos Membros da Equipe de Desenvolvimento {% endblock %}</h1>
+    {% for membro in membros %}
+        <a href="{{ url_for('info_membro', nome=membro.nome) }}">    
+            <h2>{{ membro.nome }}</h2>
+        </a>
+        
+        <hr>
+    {% endfor %}
+{% endblock %}

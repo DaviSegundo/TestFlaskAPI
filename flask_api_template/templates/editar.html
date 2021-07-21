@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Editar Modelo: "{{ modelo['title'] }}" {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Nome:</label>
+        <input type="text" name="title" placeholder="{{modelo['title']}}"
+               class="form-control"
+               value="{{ request.form['title'] or modelo['title'] }}">
+        </input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Descrição</label>
+        <textarea name="content" placeholder="{{modelo['content']}}"
+                  class="form-control">{{ request.form['content'] or modelo['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+</form>
+<hr>
+<form action="{{ url_for('deletar', modelo_title=modelo['title']) }}" method="POST">
+    <input type="submit" value="Deletar Modelo"
+            class="btn btn-danger btn-sm"
+            onclick="return confirm('Deseja realmente excluir esse modelo?')">
+</form>
+{% endblock %}

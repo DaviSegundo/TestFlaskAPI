@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Adicionar Novo Modelo de IA {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Nome:</label>
+        <input type="text" name="title"
+               placeholder="Nome do Modelo" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Descrição:</label>
+        <textarea name="content" placeholder="Descrição do Modelo"
+                  class="form-control">{{ request.form['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Criar</button>
+    </div>
+</form>
+{% endblock %}

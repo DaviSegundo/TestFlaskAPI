@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Informações do Membro {% endblock %}</h1>
+   
+    
+        <h2 style="color:#FF0000">Nome: {{ membros.nome }}</h2>
+        <p>
+        <span style="font-size: 20px;">Linguagem: {{ membros.linguagem }}</span><br />
+        </p>
+
+        <a class="btn btn-primary" href="{{url_for('index3')}}">Voltar</a>
+{% endblock %}

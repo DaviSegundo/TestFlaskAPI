@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Armazenamento dos Projetos {% endblock %}</h1>
+{% if projetos %}    
+    {% for projeto in projetos %}
+    <a href="{{ url_for('info_projeto', nome=projeto.nome) }}">
+        <h2>{{ projeto.nome }}</h2>
+    </a>
+
+    <hr>
+    {% endfor %}
+{% endif %}
+{% endblock %}
+

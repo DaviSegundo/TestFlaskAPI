@@ -1,0 +1,10 @@
+<h1>{% block title %} Armazenamento dos Projetos {% endblock %}</h1>
+{% if projetos %}    
+    {% for projeto in projetos %}
+        <h2>{{ projeto.nome }}</h2>
+        <p>
+        <span>Membros: {{ projeto.membros }}</span><br />
+        </p>
+    {% endfor %}
+{% endif %}
+

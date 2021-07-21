@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %} {{ modelo['title'] }} {% endblock %}</h2>
+    <span class="badge badge-primary">Modelo Inserido: {{ modelo['created'] }}</span>
+    <br><br/>
+    <B><span style="font-size: 20px">Descrição:</span></B>
+    <p>{{ modelo['content'] }}</p>
+{% endblock %}
